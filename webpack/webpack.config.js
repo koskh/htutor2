@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const mapToFolder = (dependencies, folder) =>
     dependencies.reduce((acc, dependency) => {
@@ -111,15 +111,15 @@ module.exports = {
         // Ignore all locale files of moment.js
         new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /en|ru/),
 
-        // new CopyWebpackPlugin(
-        //     [
-        //         {from: './src/media/assets', to: 'assets'},
-        //         // {from: './src/scripts/config/service_urls.js'}
-        //     ], {
-        //         ignore: [],
-        //         copyUnmodified: true
-        //     }
-        // )
+        new CopyWebpackPlugin(
+            [
+                {from: './src/media/assets', to: 'assets'},
+                // {from: './src/scripts/config/service_urls.js'}
+            ], {
+                ignore: [],
+                copyUnmodified: true
+            }
+        )
     ],
     devServer: {
         contentBase: path.join(__dirname, '../build'),
