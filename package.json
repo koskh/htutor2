@@ -16,11 +16,6 @@
     "url": "https://github.com/koskh/htutor2/issues"
   },
   "homepage": "https://github.com/koskh/htutor2#readme",
-  "dependencies": {
-    "classnames": "^2.2.6",
-    "css-loader": "^2.1.1",
-    "prop-types": "^15.7.2"
-  },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
@@ -35,6 +30,8 @@
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-flow-react-proptypes": "^25.1.0",
+    "classnames": "^2.2.6",
+    "css-loader": "^2.1.1",
     "eslint": "^5.16.0",
     "eslint-plugin-flowtype": "^3.9.1",
     "eslint-plugin-jsx-a11y": "^6.2.1",
@@ -54,6 +51,7 @@
     "postcss-inline-svg": "^3.1.1",
     "postcss-loader": "^3.0.0",
     "postcss-svgo": "^4.0.2",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-intl": "^2.9.0",
