@@ -35,7 +35,7 @@ baseConfig.module.rules.push(
                     modules: true,
                     localIdentName: '[local]_[hash:base64:5]',
                     sourceMap: false,
-                    importLoader: 1
+                    // importLoader: 1
                 }
             },
             {loader: 'postcss-loader'},
