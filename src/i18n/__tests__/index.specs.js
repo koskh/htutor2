@@ -8,8 +8,6 @@ const localeData ={
     'ru': require('../ru')
 };
 
-const currencies = require('../currency');
-
 describe('i18n', () => {
     test('return local without region code', () => {
         expect(i18n.getBrowserLocale()).toBe(DefaultTestSuiteLocale);
@@ -18,10 +16,5 @@ describe('i18n', () => {
     test('return locale data ', () => {
         expect(i18n.getMessages(DefaultTestSuiteLocale)).toEqual(localeData[DefaultTestSuiteLocale]);
         expect(i18n.getMessages(NotPresentLocale)).toEqual(localeData[DefaultTestSuiteLocale]);
-    });
-
-    test('return locale currency code', () => {
-        expect(i18n.getCurrency(DefaultTestSuiteLocale)).toEqual(currencies[DefaultTestSuiteLocale]);
-        expect(i18n.getCurrency(NotPresentLocale)).toEqual(currencies[DefaultTestSuiteLocale]);
     });
 });

@@ -5,14 +5,12 @@ import ru from 'react-intl/locale-data/ru';
 
 addLocaleData([...en, ...ru]);
 
-const localeData ={
+const localeData = {
     'en': require('../i18n/en'),
     'ru': require('../i18n/ru')
 };
 
-const DefaultLocale = localeData.ru;
-
-const currencies = require('./currency');
+const DefaultLocale = localeData.en;
 
 
 export default {
@@ -23,10 +21,5 @@ export default {
 
     getMessages(languageWithoutRegionCode) {
         return localeData[languageWithoutRegionCode] || DefaultLocale;
-    },
-
-    getCurrency(languageWithoutRegionCode) {
-        return currencies[languageWithoutRegionCode] || DefaultLocale;
     }
 };
-
