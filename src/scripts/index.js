@@ -16,20 +16,25 @@ import {createBrowserHistory} from 'history';
 
 const history = createBrowserHistory();
 
+import {Startup} from './ui/organisms';
 import {Dashboard, Lesson, Quiz, Settings} from './ui/templates';
 
 render(
     <IntlProvider locale={locale} messages={messages}>
-        <Router history={history}>
-            <Switch>
-                <Route exact={true} path={'/'} component={Dashboard}/>
-                <Route path={'/lesson'} component={Lesson}/>
-                <Route path={'/quiz'} component={Quiz}/>
-                <Route path={'/settings'} component={Settings}/>
+        <Startup>
 
-                <Route render={() => <Redirect to={'/'}/>}/>
-            </Switch>
-        </Router>
+            <Router history={history}>
+                <Switch>
+                    <Route exact={true} path={'/'} component={Dashboard}/>
+                    <Route path={'/lesson'} component={Lesson}/>
+                    <Route path={'/quiz'} component={Quiz}/>
+                    <Route path={'/settings'} component={Settings}/>
+
+                    <Route render={() => <Redirect to={'/'}/>}/>
+                </Switch>
+            </Router>
+
+        </Startup>
     </IntlProvider>,
     document.querySelector('#root')
 );
