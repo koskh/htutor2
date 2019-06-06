@@ -19,6 +19,8 @@ const history = createBrowserHistory();
 import {Startup} from './ui/organisms';
 import {Dashboard, Lesson, Quiz, Settings} from './ui/templates';
 
+window.application_data = {}; // global applcation storage, MVP version
+
 render(
     <IntlProvider locale={locale} messages={messages}>
         <Startup>
