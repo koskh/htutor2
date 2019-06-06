@@ -4,6 +4,8 @@
 import * as React from 'react';
 import styles from './index.pcss';
 
+import {Container, Row, Col} from 'reactstrap';
+import {Header} from '../../organisms';
 
 // type Props = {
 //
@@ -35,7 +37,12 @@ class Lesson extends React.Component<> {
      */
     render() {
         return (
-            <span>Lesson</span>
+            <Container>
+                <Header/>
+
+                <Row><Col>Lesson</Col></Row>
+
+            </Container>
         );
     }
 }

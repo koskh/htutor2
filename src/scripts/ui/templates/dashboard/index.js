@@ -4,6 +4,8 @@
 import * as React from 'react';
 import styles from './index.pcss';
 
+import {Container, Row, Col} from 'reactstrap';
+import {Header} from '../../organisms';
 
 // type Props = {
 //
@@ -36,7 +38,12 @@ class Dashboard extends React.Component<> {
      */
     render() {
         return (
-            <span>Dashboard</span>
+            <Container>
+                <Header/>
+
+                <Row><Col>Dashboard</Col></Row>
+
+            </Container>
         );
     }
 }

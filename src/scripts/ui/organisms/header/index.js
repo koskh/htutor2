@@ -4,8 +4,9 @@
 import * as React from 'react';
 import styles from './index.pcss';
 
-import {Container, Row, Col} from 'reactstrap';
-import {Header} from '../../organisms';
+import {Row, Col} from 'reactstrap';
+import {Navigation} from '../../molecules';
+
 
 // type Props = {
 //
@@ -16,9 +17,9 @@ import {Header} from '../../organisms';
 // };
 
 /**
- * Quiz View component.
+ * View component.
  */
-class Quiz extends React.Component<> {
+class Header extends React.Component<> {
     // static defaultProps: DefaultProps = {
     //
     // };
@@ -31,20 +32,21 @@ class Quiz extends React.Component<> {
     //
     // }
 
+
     /**
      * React render
      * @return {React.Component}
      */
     render() {
         return (
-            <Container>
-                <Header/>
-
-                <Row><Col>Quiz</Col></Row>
-
-            </Container>
+            <Row>
+                <Col xs={2}>Logo</Col>
+                <Col>
+                    <Navigation/>
+                </Col>
+            </Row>
         );
     }
 }
 
-export default Quiz;
+export default Header;
