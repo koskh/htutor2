@@ -1,11 +1,4 @@
-/*@import './_settings/variables.pcss';*/
-/*@import '../scripts/_atomic/_settings/variables.pcss';*/
-
-/*@import './bootstrap.css';*/
-
-/*@import './_utilities/h.pcss';*/
-/*@import './_utilities/opacity.pcss';*/
-/*@import './_utilities/width-cols.pcss';*/
+@import './bootstrap.css';
 
 @font-face {
     font-family: 'Open Sans', sans-serif;
@@ -50,59 +43,10 @@ body {
     overflow-x: hidden;
     font-size: 13px;
     line-height: 16px;
-    background-color: var(--mint_cream);
+    /*background-color: var(--mint_cream);*/
 }
 
-::placeholder {
-    color: var(--logan);
-}
 
 *:focus {
     outline: none !important;
-}
-
-.form-control:focus, .btn:focus, .btn.focus {
-    box-shadow: none;
-}
-
-.text-black {
-    color: rgba(0, 0, 0, 1) !important;
-}
-
-.text-black-25 {
-    color: rgba(0, 0, 0, 0.25) !important;
-}
-
-.text-black-50 {
-    color: rgba(0, 0, 0, 0.5) !important;
-}
-
-.text-black-75 {
-    color: rgba(0, 0, 0, 0.75) !important;
-}
-
-.tooltip-inner {
-    background-color: var(--solitude) !important;
-    color: var(--black);
-    max-width: 580px;
-}
-
-.tooltip .arrow {
-    display: none;
-}
-.page-link  {
-    color: var(--black);
-}
-
-.page-item.active .page-link {
-    background-color: var(--logan);
-    border-color: var(--logan);
-}
-
-.table-fixed {
-    table-layout: fixed;
-}
-
-.star-ratings{
-    line-height: 0;
 }
