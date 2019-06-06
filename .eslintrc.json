@@ -34,7 +34,7 @@
     "linebreak-style": 0,
     "max-len": 0,
     "no-confusing-arrow": 0,
-    "no-console": 1,
+    "no-console": 0,
     "no-empty": [2, { "allowEmptyCatch": true }],
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "no-underscore-dangle": 0,
