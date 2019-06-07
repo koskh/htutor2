@@ -13,5 +13,13 @@
   "plugins": [
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-class-properties"
-  ]
+  ],
+  "env": {
+    "development": {
+      "plugins": ["flow-react-proptypes"]
+    },
+    "test": {
+      "plugins": ["flow-react-proptypes"]
+    }
+  }
 }

@@ -25,16 +25,16 @@ render(
     <IntlProvider locale={locale} messages={messages}>
         <Startup>
 
-            <Router history={history}>
-                <Switch>
-                    <Route exact={true} path={'/'} component={Dashboard}/>
-                    <Route path={'/lesson'} component={Lesson}/>
-                    <Route path={'/quiz'} component={Quiz}/>
-                    <Route path={'/settings'} component={Settings}/>
+            {/*<Router history={history}>*/}
+            {/*    <Switch>*/}
+            {/*        <Route exact={true} path={'/'} component={Dashboard}/>*/}
+            {/*        <Route path={'/lesson'} component={Lesson}/>*/}
+            {/*        <Route path={'/quiz'} component={Quiz}/>*/}
+            {/*        <Route path={'/settings'} component={Settings}/>*/}
 
-                    <Route render={() => <Redirect to={'/'}/>}/>
-                </Switch>
-            </Router>
+            {/*        <Route render={() => <Redirect to={'/'}/>}/>*/}
+            {/*    </Switch>*/}
+            {/*</Router>*/}
 
         </Startup>
     </IntlProvider>,

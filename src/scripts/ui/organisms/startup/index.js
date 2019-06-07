@@ -1,15 +1,15 @@
 // @flow
 
-import _ from 'lodash';
+// import _ from 'lodash';
 import * as React from 'react';
-import styles from './index.pcss';
+// import styles from './index.pcss';
 
 import axios from 'axios';
 
 import {StartupPreloader} from '../../molecules';
 
 type Props = {
-    children?: React.Node,
+    children: React.Node,
 }
 //
 // type DefaultProps = {
@@ -31,22 +31,30 @@ class Startup extends React.Component<Props, State> {
 
     state: State = {
         isPending: true,
-        error: ''
+        error: '',
+        data: null
     };
 
+    /**
+     * React componentDidMount
+     * @return {Promise}
+     */
     componentDidMount() {
-        Promise.all([
+        return Promise.all([
             axios.get('/assets/lessons.json'),
             axios.get('/assets/words.json')
-        ]).then(
-            results => {
-                _.set(window.application_data, 'lessons', results[0].data);
-                _.set(window.application_data, 'words', results[0].data);
-                // console.log(results);
-
-                this.setState({isPending: false});
-            },
-            error => console.error(error));
+        ])
+        // return new Promise(resolve=> resolve('123'))
+            .then(
+                result => {
+                    // _.set(window.applicationdata, 'lessons', results[0].data);
+                    // _.set(window.application_data, 'words', results[0].data);
+                    this.setState({isPending: false, data: result});
+                },
+                reject => {
+                    console.error(reject);
+                }
+            );
     }
 
     //
@@ -57,7 +65,7 @@ class Startup extends React.Component<Props, State> {
 
     /**
      * React render
-     * @return {React.Component}
+     * @return {React.Element}
      */
     render() {
         const {children} = this.props;
