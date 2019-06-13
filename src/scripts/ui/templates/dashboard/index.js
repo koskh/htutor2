@@ -18,7 +18,7 @@ import {Header} from '../../organisms';
 /**
  * Dashboard View component.
  */
-class Dashboard extends React.Component<> {
+class Dashboard extends React.Component<*> {
     // static defaultProps: DefaultProps = {
     //
     // };
