@@ -19,24 +19,62 @@ const history = createBrowserHistory();
 import {Startup} from './ui/organisms';
 import {Dashboard, Lesson, Quiz, Settings} from './ui/templates';
 
-window.application_data = {}; // global applcation storage, MVP version
 
-render(
-    <IntlProvider locale={locale} messages={messages}>
-        <Startup>
+import DataContext from './contexts/data';
+import SettingsContext from './contexts/settings';
 
-            <Router history={history}>
-                <Switch>
-                    <Route exact={true} path={'/'} component={Dashboard}/>
-                    <Route path={'/lesson'} component={Lesson}/>
-                    <Route path={'/quiz'} component={Quiz}/>
-                    <Route path={'/settings'} component={Settings}/>
+/**
+ * Application component.
+ * Bunch application opntext to  it's state
+ */
+class App extends React.Component<*> {
+    setData = options => {
+        const {lessons, words} = options;
+        // eslint-disable-next-line no-invalid-this
+        this.setState({data: {lessons, words}});
+    };
 
-                    <Route render={() => <Redirect to={'/'}/>}/>
-                </Switch>
-            </Router>
+    state = {
+        data: {lessons: [], words: []},
+        settings: {theme: 'light'},
+        // eslint-disable-next-line no-invalid-this
+        setData: this.setData
+    };
 
-        </Startup>
-    </IntlProvider>,
-    document.querySelector('#root')
-);
+    setData = options => {
+        const {lessons, words} = options;
+        // eslint-disable-next-line no-invalid-this
+        this.setState({data: {lessons, words}});
+    };
+
+    render() {
+        return (
+            <IntlProvider locale={locale} messages={messages}>
+
+                <SettingsContext.Provider value={this.state.settings}>
+                    <DataContext.Provider value={{data: this.state.data, setData: this.state.setData}}>
+
+                        <Startup>
+
+                            <Router history={history}>
+                                <Switch>
+                                    <Route exact={true} path={'/'} component={Dashboard}/>
+                                    <Route path={'/lesson'} component={Lesson}/>
+                                    <Route path={'/quiz'} component={Quiz}/>
+                                    <Route path={'/settings'} component={Settings}/>
+
+                                    <Route render={() => <Redirect to={'/'}/>}/>
+                                </Switch>
+                            </Router>
+
+                        </Startup>
+
+                    </DataContext.Provider>
+                </SettingsContext.Provider>
+
+            </IntlProvider>
+        );
+    }
+}
+
+render(<App/>, document.querySelector('#root'));

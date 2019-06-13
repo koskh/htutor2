@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const xlsx = require('xlsx');
 
-const fileName = 'words';
+const fileName = 'data.js';
 
 const workbook = xlsx.readFile(path.resolve(__dirname, `${fileName}.xls`));
 const sheetNameList = workbook.SheetNames;

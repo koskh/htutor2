@@ -41,7 +41,9 @@ class Dashboard extends React.Component<*> {
             <Container>
                 <Header/>
 
-                <Row><Col>Dashboard</Col></Row>
+                <Row className={'my-2'}/>
+
+                <Row><Col>Доступные уроки</Col></Row>
 
             </Container>
         );

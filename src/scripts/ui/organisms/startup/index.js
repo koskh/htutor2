@@ -6,6 +6,8 @@ import * as React from 'react';
 
 import axios from 'axios';
 
+import WordsDataContext from '../../../contexts/data';
+
 import {StartupPreloader} from '../../molecules';
 
 type Props = {
@@ -29,6 +31,8 @@ class Startup extends React.Component<Props, State> {
     //
     // };
 
+    static contextType = WordsDataContext;
+
     state: State = {
         isPending: true,
         error: '',
@@ -44,12 +48,10 @@ class Startup extends React.Component<Props, State> {
             axios.get('/assets/lessons.json'),
             axios.get('/assets/words.json')
         ])
-        // return new Promise(resolve=> resolve('123'))
             .then(
-                result => {
-                    // _.set(window.applicationdata, 'lessons', results[0].data);
-                    // _.set(window.application_data, 'words', results[0].data);
-                    this.setState({isPending: false, data: result});
+                results => {
+                    this.context && this.context.setData({lessons: results[0].data, words: results[1].data});
+                    this.setState && this.setState({isPending: false, data: results});
                 },
                 reject => {
                     console.error(reject);
@@ -68,6 +70,8 @@ class Startup extends React.Component<Props, State> {
      * @return {React.Element}
      */
     render() {
+        console.log('this.context', this.context)
+
         const {children} = this.props;
         const {isPending} = this.state;
 
