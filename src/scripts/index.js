@@ -27,14 +27,14 @@ import SettingsContext from './contexts/settings';
  * Application component.
  * Bunch application opntext to  it's state
  */
-class App extends React.Component<*> {
+class App extends React.Component<*, *> {
     setData = options => {
         const {lessons, words} = options;
         // eslint-disable-next-line no-invalid-this
         this.setState({data: {lessons, words}});
     };
 
-    state = {
+    state: any = {
         data: {lessons: [], words: []},
         settings: {theme: 'light'},
         // eslint-disable-next-line no-invalid-this

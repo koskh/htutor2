@@ -2,15 +2,16 @@
 
 // import _ from 'lodash';
 import * as React from 'react';
-// import styles from './index.pcss';
-
 import axios from 'axios';
+
+// import styles from './index.pcss';
 
 import WordsDataContext from '../../../contexts/data';
 
 import {StartupPreloader} from '../../molecules';
 
 type Props = {
+    setWordsData: Function,
     children: React.Node,
 }
 //
@@ -27,11 +28,9 @@ type State = {
  * It load resources before start application
  */
 class Startup extends React.Component<Props, State> {
-    // static defaultProps: DefaultProps = {
-    //
-    // };
-
-    static contextType = WordsDataContext;
+    static defaultProps: Props = {
+        setWordsData: x=>x
+    };
 
     state: State = {
         isPending: true,
@@ -50,7 +49,9 @@ class Startup extends React.Component<Props, State> {
         ])
             .then(
                 results => {
-                    this.context && this.context.setData({lessons: results[0].data, words: results[1].data});
+                    const {setWordsData} = this.props;
+
+                    setWordsData({lessons: results[0].data, words: results[1].data});
                     this.setState && this.setState({isPending: false, data: results});
                 },
                 reject => {
@@ -70,8 +71,6 @@ class Startup extends React.Component<Props, State> {
      * @return {React.Element}
      */
     render() {
-        console.log('this.context', this.context)
-
         const {children} = this.props;
         const {isPending} = this.state;
 
@@ -79,4 +78,21 @@ class Startup extends React.Component<Props, State> {
     }
 }
 
-export default Startup;
+
+export {Startup};
+
+/**
+ * ConnectedStartup
+ * Connected Startup component to WordsDataContext
+ * @param {props} props
+ * @return {React.Node}
+ */
+export default function ConnectedStartup(props) {
+    return (
+        <WordsDataContext.Consumer>
+            { data =>
+                <Startup {...props} setWordsData={data.setData}/>
+            }
+        </WordsDataContext.Consumer>
+    );
+}

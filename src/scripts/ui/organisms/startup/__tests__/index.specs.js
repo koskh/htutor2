@@ -1,7 +1,7 @@
 import * as React from 'react';
 import renderer from 'react-test-renderer';
 
-import Component from '../';
+import {Startup as Component} from '../';
 
 import {StartupPreloader} from '../../../molecules';
 import DumbComponent from '../../../../../scripts/utilities/templates/component';
@@ -9,6 +9,11 @@ import DumbComponent from '../../../../../scripts/utilities/templates/component'
 import axios from 'axios';
 
 jest.mock('axios');
+
+const response = {
+    data: 'Dumb mock text'
+};
+axios.get.mockResolvedValue(response);
 
 describe('Startup Component', () => {
     test('Component  need children for render', () => {
@@ -40,11 +45,6 @@ describe('Startup Component', () => {
     });
 
     test('get application global data', () => {
-        const response = {
-            data: 'Dumb mock text'
-        };
-        axios.get.mockResolvedValue(response);
-
         const component = renderer.create(<Component><DumbComponent/></Component>);
         const instance = component.getInstance();
 
