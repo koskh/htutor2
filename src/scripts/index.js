@@ -12,9 +12,7 @@ const locale = i18n.getBrowserLocale();
 const messages = i18n.getMessages(locale);
 
 import {Router, Redirect, Route, Switch} from 'react-router-dom';
-import {createBrowserHistory} from 'history';
-
-const history = createBrowserHistory();
+import history from '../scripts/utilities/history';
 
 import {Startup} from './ui/organisms';
 import {Dashboard, Lesson, Quiz, Settings} from './ui/templates';
@@ -59,7 +57,7 @@ class App extends React.Component<*, *> {
                             <Router history={history}>
                                 <Switch>
                                     <Route exact={true} path={'/'} component={Dashboard}/>
-                                    <Route path={'/lesson'} component={Lesson}/>
+                                    <Route path={'/lesson/:id'} component={Lesson}/>
                                     <Route path={'/quiz'} component={Quiz}/>
                                     <Route path={'/settings'} component={Settings}/>
 

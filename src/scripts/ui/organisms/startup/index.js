@@ -14,10 +14,6 @@ type Props = {
     setWordsData: Function,
     children: React.Node,
 }
-//
-// type DefaultProps = {
-//     data: Object
-// };
 
 type State = {
     isPending: boolean;
@@ -87,7 +83,7 @@ export {Startup};
  * @param {props} props
  * @return {React.Node}
  */
-export default function ConnectedStartup(props) {
+export default function ConnectedStartup(props: any) {
     return (
         <WordsDataContext.Consumer>
             { data =>

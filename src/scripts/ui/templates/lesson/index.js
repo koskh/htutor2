@@ -40,7 +40,9 @@ class Lesson extends React.Component<> {
             <Container>
                 <Header/>
 
-                <Row><Col>Lesson</Col></Row>
+                <Row className={'my-2'}/>
+
+                <Row><Col>Урок: ...</Col></Row>
 
             </Container>
         );
