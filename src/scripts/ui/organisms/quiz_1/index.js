@@ -38,9 +38,16 @@ class Quiz1 extends React.Component<Props> {
     //
     // }
 
-    _onSend = () => {
+    _onSend = (options: any) => {
         // eslint-disable-next-line no-invalid-this
-        this.props.onSend();
+        const {wordId, words} = this.props;
+        const {id} = options;
+
+        if (wordId === id) {
+            // eslint-disable-next-line no-invalid-this
+            this.props.onSend();
+        }
+
     };
 
     /**
@@ -49,31 +56,41 @@ class Quiz1 extends React.Component<Props> {
      */
     render() {
         const {wordId, words} = this.props;
-
         const LNGS = ['en', 'srb', 'ru'];
+
         const quizLng = _.sample(LNGS);
+        _.remove(LNGS, v => v === quizLng);
 
         const word = getWordById({wordsId: wordId, words: words});
-
-        const quizWord = _.get(word, `word_${quizLng}`);
-        const answerWords = _.compact(_.map(LNGS, (v: String) => {
-            return v !== quizLng ? _.get(word, `word_${v}`) : '';
-        }));
 
         const QNT_VARIANTS = 6;
         const variants = getRandomWords({excludedWordId: wordId, words, quantity: QNT_VARIANTS});
 
+        const answers = _.shuffle([...variants, word]);
 
-        console.log('answerWords', answerWords);
-        console.log('variants', variants);
 
         return (
             <React.Fragment>
                 <Row>
                     <Col className={'text-center font-weight-bold'}>
-                        {quizWord}
+                        {_.get(word, `word_${quizLng}`)}
                     </Col>
                 </Row>
+
+                <Row className={'my-2'}/>
+
+                {_.map(answers, (v: any, k: number) => {
+                    const lng = _.sample(LNGS);
+
+                    return (
+                        <Button key={k} outline={true} color="info" block={true}
+                                onClick={() => this._onSend({id: v.id})}
+                        >
+                            {_.get(v, `word_${lng}`)}
+                        </Button>
+                    );
+                })}
+
 
             </React.Fragment>
         );
