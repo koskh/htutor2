@@ -53,12 +53,10 @@ class Dashboard extends React.Component<Props> {
 
                 <Row className={'my-2'}/>
 
-                <Row><Col>Доступные уроки</Col></Row>
-
                 {_.map(lessons, (v: any, k: number) => {
                     return (
                         <Button key={k}
-                            color="primary" block={true}
+                            color="secondary" block={true}
                             onClick={() => this._onClickHandler({id: v.id})}>
                             {v.title}
                         </Button>

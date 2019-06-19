@@ -73,7 +73,9 @@ class Quiz1 extends React.Component<Props> {
             <React.Fragment>
                 <Row>
                     <Col className={'text-center font-weight-bold'}>
-                        {_.get(word, `word_${quizLng}`)}
+                        <Button color="light" block={true}>
+                            {_.get(word, `word_${quizLng}`)}
+                        </Button>
                     </Col>
                 </Row>
 
