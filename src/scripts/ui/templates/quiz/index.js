@@ -6,10 +6,19 @@ import styles from './index.pcss';
 
 import {Container, Row, Col} from 'reactstrap';
 import {Header} from '../../organisms';
+import WordsDataContext from "../../../contexts/data";
+import _ from "lodash";
+import {Lesson} from "../lesson";
 
-// type Props = {
-//
-// }
+type Props = {
+    lesson: {
+        id: number,
+        title: string,
+        wordsIds: string
+    },
+    words: Array<*>,
+    lessonId: string
+}
 //
 // type DefaultProps = {
 //     data: Object
@@ -18,7 +27,7 @@ import {Header} from '../../organisms';
 /**
  * Quiz View component.
  */
-class Quiz extends React.Component<> {
+class Quiz extends React.Component<Props> {
     // static defaultProps: DefaultProps = {
     //
     // };
@@ -47,4 +56,28 @@ class Quiz extends React.Component<> {
     }
 }
 
-export default Quiz;
+export {Quiz};
+
+/**
+ * ConnectedQuiz
+ * Connected Startup component to WordsDataContext
+ * @param {props} props
+ * @return {React.Node}
+ */
+export default function ConnectedLesson(props: any) {
+    return (
+        <WordsDataContext.Consumer>
+            {({data}) =>{
+                const lessonId = _.get(props, 'match.params.id');
+                const lesson = _.get(data, `lessons[${lessonId}]`);
+                const words = _.get(data, `words`);
+
+                return (
+                    <Quiz {...props} lessonId={lessonId} lesson={lesson} words={words}/>
+                );
+            }
+
+            }
+        </WordsDataContext.Consumer>
+    );
+}

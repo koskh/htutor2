@@ -11,7 +11,7 @@ import styles from './index.pcss';
 import {Container, Row, Col, Button} from 'reactstrap';
 import {Header} from '../../organisms';
 
-import WordInfo from '../../molecules/word_info';
+import wordsIdsAsNumbers from '../../../utilities/wordsIdsAsNumbers';
 
 type Props = {
     lesson: {
@@ -35,22 +35,15 @@ class Lesson extends React.Component<Props> {
     //
     // };
 
-    componentDidMount() {
-        console.log('lessonId', this.props.lessonId);
-        console.log('lesson', this.props.lesson);
-        console.log('words', this.props.words);
-    }
+    // componentDidMount() {
+    //     console.log('lessonId', this.props.lessonId);
+    //     console.log('lesson', this.props.lesson);
+    //     console.log('words', this.props.words);
+    // }
     //
     // componentWillUnmount() {
     //
     // }
-
-    _getWordIds = (options: any) => {
-        const {lessonId} = options;
-        // return wordsIds;
-        // eslint-disable-next-line no-invalid-this
-        console.log(_.get(this.props.defaultData, `lessons[${lessonId}].wordsIds`));
-    };
 
     _onQuizStartHandler = () => {
         // eslint-disable-next-line no-invalid-this
@@ -64,7 +57,7 @@ class Lesson extends React.Component<Props> {
      * @return {React.Component}
      */
     render() {
-        // this._getWordIds({lessonId});
+        console.log('wordsIdsAsNumbers', wordsIdsAsNumbers({wordsIds: this.props.lesson.wordsIds}));
 
 
         // const {}
