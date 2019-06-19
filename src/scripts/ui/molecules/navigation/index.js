@@ -2,9 +2,10 @@
 
 // import _ from 'lodash';
 import * as React from 'react';
+
 import styles from './index.pcss';
 
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import {Nav, NavItem} from 'reactstrap';
 
 
@@ -12,7 +13,6 @@ import {Nav, NavItem} from 'reactstrap';
  * View component.
  */
 class Component extends React.Component<> {
-
     /**
      * React render
      * @return {React.Component}
@@ -21,7 +21,7 @@ class Component extends React.Component<> {
         return (
             <Nav>
                 <NavItem>
-                    <NavLink  to="/dashboard" className="nav-link" activeClassName="active" >Dashboard</NavLink>
+                    <NavLink to="/dashboard" className="nav-link" activeClassName="active" >Dashboard</NavLink>
                 </NavItem>
 
                 <NavItem>
