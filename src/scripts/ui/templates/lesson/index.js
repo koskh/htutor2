@@ -11,7 +11,8 @@ import styles from './index.pcss';
 import {Container, Row, Col, Button} from 'reactstrap';
 import {Header} from '../../organisms';
 
-import wordsIdsAsNumbers from '../../../utilities/wordsIdsAsNumbers';
+import wordsIdsAsNumbers from '../../../utilities/words_lessons/wordsIdsAsNumbers';
+import getWordById from '../../../utilities/words_lessons/getWordById';
 
 type Props = {
     lesson: {
@@ -57,11 +58,17 @@ class Lesson extends React.Component<Props> {
      * @return {React.Component}
      */
     render() {
-        console.log('wordsIdsAsNumbers', wordsIdsAsNumbers({wordsIds: this.props.lesson.wordsIds}));
+        // const wordsIds = wordsIdsAsNumbers({wordsIds: this.props.lesson.wordsIds});
+        // console.log('wordsId', wordsIdsAsNumbers({wordsIds: this.props.lesson.wordsIds}));
+        // console.log('getWordById', getWordById({wordsId: wordsIds[2], words: this.props.words}));
+
+
+        const {words} = this.props;
+        const {wordsIds} = this.props.lesson;
 
 
         // const {}
-        // console.log('_getWordIds', this._getWordIds({wordsIds}));
+        // console.log('_getWordIds', this._getWordIds({wordsId}));
 
         return (
             <Container>
@@ -80,6 +87,20 @@ class Lesson extends React.Component<Props> {
                     Начать тест...
                 </Button>
 
+                <Row className={'my-2'}/>
+
+                {_.map(wordsIdsAsNumbers({wordsIds: this.props.lesson.wordsIds}), (v: any, k: number)=>{
+                    const word = getWordById({wordsId: v, words: this.props.words});
+
+                    if (!word)
+                        return null;
+
+                    return (
+                        <div key={k}>
+                            {word.id} {word.word_en} - {word.word_srb} - {word.word_ru}
+                        </div>
+                    );
+                })}
 
             </Container>
         );
