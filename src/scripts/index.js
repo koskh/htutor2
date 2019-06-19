@@ -57,9 +57,9 @@ class App extends React.Component<*, *> {
                             <Router history={history}>
                                 <Switch>
                                     <Route exact={true} path={'/'} component={Dashboard}/>
-                                    <Route path={'/lesson/:id'} component={Lesson}/>
-                                    <Route path={'/quiz'} component={Quiz}/>
-                                    <Route path={'/settings'} component={Settings}/>
+                                    <Route exact={true} path={'/lesson/:id'} component={Lesson}/>
+                                    <Route exact={true} path={'/quiz/:id'} component={Quiz}/>
+                                    <Route exact={true} path={'/settings'} component={Settings}/>
 
                                     <Route render={() => <Redirect to={'/'}/>}/>
                                 </Switch>

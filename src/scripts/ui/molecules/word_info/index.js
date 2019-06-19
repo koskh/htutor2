@@ -9,10 +9,7 @@ import {Button} from 'reactstrap';
 
 
 type Props = {
-    defaultData: {
-        title: string,
-        id: string
-    }
+
 }
 //
 // type DefaultProps = {
@@ -22,7 +19,7 @@ type Props = {
 /**
  * View component.
  */
-class Lesson extends React.Component<Props> {
+class WordInfo extends React.Component<Props> {
     static defaultProps: Props = {
         defaultData: {
             title: '',
@@ -45,11 +42,10 @@ class Lesson extends React.Component<Props> {
      * @return {React.Component}
      */
     render() {
-
         return (
             null
         );
     }
 }
 
-export default Lesson;
+export default WordInfo;
