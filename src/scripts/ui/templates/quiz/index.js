@@ -1,14 +1,17 @@
 // @flow
 
-// import _ from 'lodash';
+import _ from 'lodash';
 import * as React from 'react';
+
 import styles from './index.pcss';
 
 import {Container, Row, Col} from 'reactstrap';
 import {Header} from '../../organisms';
-import WordsDataContext from "../../../contexts/data";
-import _ from "lodash";
-import {Lesson} from "../lesson";
+
+import wordsIdsAsNumbers from '../../../utilities/words_lessons/wordsIdsAsNumbers';
+import getWordById from '../../../utilities/words_lessons/getWordById';
+
+import Quiz1 from '../../organisms/quiz_1';
 
 type Props = {
     lesson: {
@@ -40,16 +43,26 @@ class Quiz extends React.Component<Props> {
     //
     // }
 
+    _onSend = () => {
+
+    }
+
     /**
      * React render
      * @return {React.Component}
      */
     render() {
+        // const wordsIds = wordsIdsAsNumbers({wordsIds: this.props.lesson.wordsIds});
+        // console.log('wordsId', wordsIdsAsNumbers({wordsIds: this.props.lesson.wordsIds}));
+        // console.log('getWordById', getWordById({wordsId: wordsIds[2], words: this.props.words}));
+
         return (
             <Container>
                 <Header/>
 
-                <Row><Col>Quiz</Col></Row>
+                <Row className={'my-2'}/>
+
+                <Quiz1 wordId={0} onSend={this._onSend}/>
 
             </Container>
         );
@@ -57,6 +70,8 @@ class Quiz extends React.Component<Props> {
 }
 
 export {Quiz};
+
+import WordsDataContext from '../../../contexts/data';
 
 /**
  * ConnectedQuiz
@@ -67,7 +82,7 @@ export {Quiz};
 export default function ConnectedLesson(props: any) {
     return (
         <WordsDataContext.Consumer>
-            {({data}) =>{
+            {({data}) => {
                 const lessonId = _.get(props, 'match.params.id');
                 const lesson = _.get(data, `lessons[${lessonId}]`);
                 const words = _.get(data, `words`);
