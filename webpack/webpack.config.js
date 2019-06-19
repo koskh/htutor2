@@ -125,6 +125,7 @@ module.exports = {
         contentBase: path.join(__dirname, '../build'),
         compress: true,
         historyApiFallback: true,
+        host: '0.0.0.0',
         port: 80
     }
 };

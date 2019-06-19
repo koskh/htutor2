@@ -61,6 +61,7 @@ class Quiz extends React.Component<Props, State> {
         if (nextIndex === wordsIds.length - 1)
             history.push(`/`);
 
+        // eslint-disable-next-line no-invalid-this
         this.setState({currentIndex: nextIndex});
     };
 
@@ -81,7 +82,7 @@ class Quiz extends React.Component<Props, State> {
 
                 <Row className={'my-2'}/>
 
-                <Quiz1 wordId={wordsIds[currentIndex]} onSend={this._onSend}/>
+                <Quiz1 key={currentIndex} wordId={wordsIds[currentIndex]} onSend={this._onSend}/>
 
             </Container>
         );

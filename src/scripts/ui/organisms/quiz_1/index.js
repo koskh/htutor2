@@ -15,19 +15,41 @@ import getRandomWords from '../../../utilities/words_lessons/getRandomWords';
 type Props = {
     wordId: number,
     words: Array<*>,
-    onSend: Function
+    onSend: Function,
+
+    settings: {
+        availabledLngs: Array<string>
+    }
+
 }
 //
 type DefaultProps = {
+    settings: {
+        availabledLngs: Array<string>
+    },
     onSend: Function
 };
+
+type State = {
+    isCorrect: ?boolean,
+    quizLng: string
+}
 
 /**
  * View component.
  */
-class Quiz1 extends React.Component<Props> {
+class Quiz1 extends React.Component<Props, State> {
     static defaultProps: DefaultProps = {
+        settings: {
+            availabledLngs: ['en', 'srb', 'ru']
+        },
         onSend: x => x
+    };
+
+    state: State = {
+        // eslint-disable-next-line no-invalid-this
+        quizLng: _.sample(this.props.settings.availabledLngs),
+        isCorrect: undefined
     };
 
     // componentDidMount() {
@@ -45,9 +67,12 @@ class Quiz1 extends React.Component<Props> {
 
         if (wordId === id) {
             // eslint-disable-next-line no-invalid-this
-            this.props.onSend();
-        }
-
+            this.props.onSend({isCorrect: true});
+            // eslint-disable-next-line no-invalid-this
+            this.setState({isCorrect: true});
+        } else
+        // eslint-disable-next-line no-invalid-this
+            this.setState({isCorrect: false});
     };
 
     /**
@@ -55,11 +80,10 @@ class Quiz1 extends React.Component<Props> {
      * @return {React.Component}
      */
     render() {
-        const {wordId, words} = this.props;
-        const LNGS = ['en', 'srb', 'ru'];
+        const {wordId, words, settings} = this.props;
+        const {quizLng} = this.state;
 
-        const quizLng = _.sample(LNGS);
-        _.remove(LNGS, v => v === quizLng);
+        const variantsLngs = _.without(settings.availabledLngs, quizLng);
 
         const word = getWordById({wordsId: wordId, words: words});
 
@@ -68,12 +92,11 @@ class Quiz1 extends React.Component<Props> {
 
         const answers = _.shuffle([...variants, word]);
 
-
         return (
             <React.Fragment>
                 <Row>
                     <Col className={'text-center font-weight-bold'}>
-                        <Button color="light" block={true}>
+                        <Button color={this.state.isCorrect === false ? 'danger' : 'light'} block={true}>
                             {_.get(word, `word_${quizLng}`)}
                         </Button>
                     </Col>
@@ -82,11 +105,11 @@ class Quiz1 extends React.Component<Props> {
                 <Row className={'my-2'}/>
 
                 {_.map(answers, (v: any, k: number) => {
-                    const lng = _.sample(LNGS);
+                    const lng = _.sample(variantsLngs);
 
                     return (
                         <Button key={k} outline={true} color="info" block={true}
-                                onClick={() => this._onSend({id: v.id})}
+                            onClick={() => this._onSend({id: v.id})}
                         >
                             {_.get(v, `word_${lng}`)}
                         </Button>
