@@ -4,33 +4,14 @@
 import * as React from 'react';
 import styles from './index.pcss';
 
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import {Nav, NavItem} from 'reactstrap';
 
-
-// type Props = {
-//
-// }
-//
-// type DefaultProps = {
-//     data: Object
-// };
 
 /**
  * View component.
  */
 class Component extends React.Component<> {
-    // static defaultProps: DefaultProps = {
-    //
-    // };
-
-    // componentDidMount() {
-    //
-    // }
-    //
-    // componentWillUnmount() {
-    //
-    // }
-
 
     /**
      * React render
@@ -38,10 +19,15 @@ class Component extends React.Component<> {
      */
     render() {
         return (
-            <nav>
-                <NavLink to={`/dashboard`}>Dashboard</NavLink>
-                <NavLink to={`/settings`}>Settings</NavLink>
-            </nav>
+            <Nav>
+                <NavItem>
+                    <NavLink  to="/dashboard" className="nav-link" activeClassName="active" >Dashboard</NavLink>
+                </NavItem>
+
+                <NavItem>
+                    <NavLink to="/settings" className="nav-link" activeClassName="active" >Settings</NavLink>
+                </NavItem>
+            </Nav>
         );
     }
 }
