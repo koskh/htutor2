@@ -10,6 +10,7 @@ import {Row, Col, Button} from 'reactstrap';
 
 import wordsIdsAsNumbers from '../../../utilities/words_lessons/wordsIdsAsNumbers';
 import getWordById from '../../../utilities/words_lessons/getWordById';
+import getRandomWords from '../../../utilities/words_lessons/getRandomWords';
 
 type Props = {
     wordId: number,
@@ -47,14 +48,24 @@ class Quiz1 extends React.Component<Props> {
      * @return {React.Component}
      */
     render() {
+        const {wordId, words} = this.props;
+
         const LNGS = ['en', 'srb', 'ru'];
         const quizLng = _.sample(LNGS);
 
-        const word = getWordById({wordsId: this.props.wordId, words: this.props.words});
+        const word = getWordById({wordsId: wordId, words: words});
 
         const quizWord = _.get(word, `word_${quizLng}`);
+        const answerWords = _.compact(_.map(LNGS, (v: String) => {
+            return v !== quizLng ? _.get(word, `word_${v}`) : '';
+        }));
 
-        console.log('quizWord', quizWord);
+        const QNT_VARIANTS = 6;
+        const variants = getRandomWords({excludedWordId: wordId, words, quantity: QNT_VARIANTS});
+
+
+        console.log('answerWords', answerWords);
+        console.log('variants', variants);
 
         return (
             <React.Fragment>
