@@ -17,9 +17,9 @@ export default function wordsIdsAsNumbers(options) {
             numbers.push(_.toNumber(v));
         else {
             const periodNumbers = _.words(v);
-            numbers.push( _.range(_.toNumber(_.first(periodNumbers)), _.toNumber(_.last(periodNumbers)) + 1));
+            numbers.push(_.range(_.toNumber(_.first(periodNumbers)), _.toNumber(_.last(periodNumbers)) + 1));
         }
     });
 
     return _.flatten(numbers);
-};
+}
