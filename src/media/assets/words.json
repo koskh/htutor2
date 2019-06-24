@@ -31,7 +31,7 @@
     "addition_en": "lie, lied [li:d], lied",
     "word_srb": "лаж, лагати",
     "addition_srb": "E-verb",
-    "word_ru": "ложь, лгать"
+    "word_ru": "лож, лгать"
   },
   {
     "id": 4,
@@ -82,5 +82,627 @@
     "word_srb": "разумем",
     "addition_srb": "E-verb",
     "word_ru": "понимать "
+  },
+  {
+    "id": 10,
+    "word_en": "cordial",
+    "transcript_en": "ˈkôrjəl ",
+    "example_en": "the atmosphere was cordial and relaxed ",
+    "word_srb": "срдачан",
+    "word_ru": "радушный"
+  },
+  {
+    "id": 11,
+    "word_en": "warm",
+    "transcript_en": "wôrm ",
+    "word_srb": "топло",
+    "word_ru": "теплый"
+  },
+  {
+    "id": 12,
+    "word_en": "cold",
+    "transcript_en": "kōld ",
+    "word_srb": "хладно",
+    "word_ru": "холодно"
+  },
+  {
+    "id": 13,
+    "word_en": "cloudless",
+    "transcript_en": "klaʋdlıs",
+    "word_srb": "ведар",
+    "word_ru": "безоблачный"
+  },
+  {
+    "id": 14,
+    "word_en": "rainy",
+    "transcript_en": "ˈrānē ",
+    "word_srb": "кишовито",
+    "word_ru": "дождливый "
+  },
+  {
+    "id": 15,
+    "word_en": "misty",
+    "transcript_en": "ˈmistē ",
+    "word_srb": "магловит",
+    "word_ru": "туманный"
+  },
+  {
+    "id": 16,
+    "word_en": "travel",
+    "word_srb": "путовати",
+    "word_ru": "путешествовать"
+  },
+  {
+    "id": 17,
+    "word_en": "pack",
+    "transcript_en": "pak",
+    "word_srb": "паковање",
+    "word_ru": "упаковка "
+  },
+  {
+    "id": 18,
+    "word_en": "buy ",
+    "transcript_en": "bī ",
+    "word_srb": "куповати",
+    "word_ru": "покупать "
+  },
+  {
+    "id": 19,
+    "word_en": "organize",
+    "transcript_en": "ˈôrgəˌnīz ",
+    "word_srb": "организовати",
+    "word_ru": "организовать "
+  },
+  {
+    "id": 20,
+    "word_en": "revile",
+    "transcript_en": "riˈvīl ",
+    "word_srb": "псовати",
+    "word_ru": "поносить"
+  },
+  {
+    "id": 21,
+    "word_en": "have breakfast",
+    "word_srb": "доручковати",
+    "word_ru": "завтракать"
+  },
+  {
+    "id": 22,
+    "word_en": "renting",
+    "word_srb": "изнајмљивање",
+    "word_ru": "арендовать"
+  },
+  {
+    "id": 23,
+    "word_en": "wait",
+    "word_srb": "чекати",
+    "word_ru": "ждать"
+  },
+  {
+    "id": 24,
+    "word_en": "expect",
+    "word_srb": "очекивати",
+    "word_ru": "ожидать"
+  },
+  {
+    "id": 25,
+    "word_en": "go",
+    "word_srb": "ићи",
+    "word_ru": "идти"
+  },
+  {
+    "id": 26,
+    "word_en": "come",
+    "word_srb": "доћи",
+    "word_ru": "прийти"
+  },
+  {
+    "id": 27,
+    "word_en": "call",
+    "word_srb": "звати",
+    "word_ru": "назвать, вызывать "
+  },
+  {
+    "id": 28,
+    "word_en": "message",
+    "transcript_en": "ˈmesij ",
+    "word_srb": "порука",
+    "word_ru": "сообщение"
+  },
+  {
+    "id": 29,
+    "word_en": "drink",
+    "word_srb": "пити",
+    "word_ru": "пить"
+  },
+  {
+    "id": 30,
+    "word_en": "hear",
+    "transcript_en": "hi(ə)r ",
+    "word_srb": "чути",
+    "word_ru": "слушать "
+  },
+  {
+    "id": 31,
+    "word_en": "sell",
+    "word_srb": "продати",
+    "word_ru": "продавать"
+  },
+  {
+    "id": 32,
+    "word_en": "wash",
+    "word_srb": "прати",
+    "word_ru": "мыть, стирать"
+  },
+  {
+    "id": 33,
+    "word_en": "run",
+    "word_srb": "трцати",
+    "word_ru": "бежать"
+  },
+  {
+    "id": 34,
+    "word_en": "somewhere",
+    "transcript_en": "ˈsəmˌ(h)we(ə)r ",
+    "word_srb": "негде",
+    "word_ru": "где то"
+  },
+  {
+    "id": 35,
+    "word_en": "young",
+    "transcript_en": "yəNG ",
+    "word_srb": "млад",
+    "addition_srb": "млади",
+    "word_ru": "молодой"
+  },
+  {
+    "id": 36,
+    "word_en": "old ",
+    "word_srb": "стар ",
+    "addition_srb": "стари",
+    "word_ru": "старый"
+  },
+  {
+    "id": 37,
+    "word_en": "new",
+    "word_srb": "нов ",
+    "addition_srb": "нови",
+    "word_ru": "новый "
+  },
+  {
+    "id": 38,
+    "word_en": "light",
+    "word_srb": "светао, лак",
+    "addition_srb": "светли, лаки",
+    "word_ru": "светлый, легкий"
+  },
+  {
+    "id": 39,
+    "word_en": "dark",
+    "transcript_en": "därk ",
+    "word_srb": "тамно",
+    "word_ru": "темный"
+  },
+  {
+    "id": 40,
+    "word_en": "some",
+    "word_srb": "неки",
+    "word_ru": "какой то, некий"
+  },
+  {
+    "id": 41,
+    "word_en": "fat",
+    "word_srb": "дебео",
+    "addition_srb": "дебели",
+    "word_ru": "толстый"
+  },
+  {
+    "id": 42,
+    "word_en": "thin",
+    "transcript_en": "THin ",
+    "word_srb": "танак",
+    "addition_srb": "танки",
+    "word_ru": "тонкий"
+  },
+  {
+    "id": 43,
+    "word_en": "heavy, difficult",
+    "word_srb": "тежак ",
+    "addition_srb": "тешки",
+    "word_ru": "тяжелый"
+  },
+  {
+    "id": 44,
+    "word_en": "boring",
+    "word_srb": "досадан",
+    "word_ru": "скучный"
+  },
+  {
+    "id": 45,
+    "word_en": "ugly",
+    "transcript_en": "ˈəglē ",
+    "word_srb": "ружан",
+    "word_ru": "уродливый"
+  },
+  {
+    "id": 46,
+    "word_en": "white",
+    "word_srb": "бео",
+    "word_ru": "белый"
+  },
+  {
+    "id": 47,
+    "word_en": "big",
+    "word_srb": "велик ",
+    "word_ru": "большой"
+  },
+  {
+    "id": 48,
+    "word_en": "small",
+    "word_srb": "мали",
+    "word_ru": "маленький"
+  },
+  {
+    "id": 49,
+    "word_en": "convenient",
+    "transcript_en": "kənˈvēnyənt ",
+    "word_srb": "удобан ",
+    "addition_srb": "удобан/неудобан",
+    "word_ru": "удобный"
+  },
+  {
+    "id": 50,
+    "word_en": "stupid",
+    "transcript_en": "ˈst(y)o͞opid ",
+    "word_srb": "глуп ",
+    "word_ru": "глупый"
+  },
+  {
+    "id": 51,
+    "word_en": "smart",
+    "word_srb": "паметан",
+    "word_ru": "умный"
+  },
+  {
+    "id": 52,
+    "word_en": "but",
+    "word_srb": "али",
+    "word_ru": "но"
+  },
+  {
+    "id": 53,
+    "word_en": "or",
+    "word_srb": "или",
+    "word_ru": "или"
+  },
+  {
+    "id": 54,
+    "word_en": "pencil",
+    "word_srb": "оловка",
+    "word_ru": "карандаш"
+  },
+  {
+    "id": 55,
+    "word_en": "the mirror",
+    "word_srb": "огледало",
+    "word_ru": "зеркало"
+  },
+  {
+    "id": 56,
+    "word_en": "expensive",
+    "word_srb": "скуп",
+    "word_ru": "дорогое"
+  },
+  {
+    "id": 57,
+    "word_en": "cook",
+    "word_srb": "кувати",
+    "word_ru": "готовить"
+  },
+  {
+    "id": 58,
+    "word_en": "if",
+    "word_srb": "ако",
+    "word_ru": "если"
+  },
+  {
+    "id": 59,
+    "word_en": "passionately",
+    "transcript_en": "pæʃ(ə)nıtly",
+    "word_srb": "страсно",
+    "word_ru": "страстный, пылкий"
+  },
+  {
+    "id": 60,
+    "word_en": "long",
+    "word_srb": "дуго",
+    "word_ru": "долго"
+  },
+  {
+    "id": 61,
+    "word_en": "together",
+    "transcript_en": "təˈgeT͟Hər ",
+    "word_srb": "заједно",
+    "word_ru": "все вместе"
+  },
+  {
+    "id": 62,
+    "word_en": "why",
+    "word_srb": "зашто",
+    "word_ru": "Зачем"
+  },
+  {
+    "id": 63,
+    "word_en": "immediately",
+    "transcript_en": "iˈmēdē-itlē ",
+    "word_srb": "одмах",
+    "word_ru": "немедленно, тотчас же"
+  },
+  {
+    "id": 64,
+    "word_en": "comfortably",
+    "word_srb": "комотно",
+    "word_ru": "удобно"
+  },
+  {
+    "id": 65,
+    "word_en": "exercise",
+    "transcript_en": "ˈeksərˌsīz ",
+    "word_srb": "вежбе",
+    "word_ru": "упражнение"
+  },
+  {
+    "id": 66,
+    "word_en": "prevent",
+    "transcript_en": "priˈvent ",
+    "word_srb": "спречити",
+    "word_ru": "предотвращать"
+  },
+  {
+    "id": 67,
+    "word_en": "interfere",
+    "transcript_en": "ˌintərˈfi(ə)r ",
+    "word_srb": "ометати",
+    "word_ru": "мешать"
+  },
+  {
+    "id": 68,
+    "word_en": "notebook",
+    "word_srb": "свеска",
+    "word_ru": "тетрадь"
+  },
+  {
+    "id": 69,
+    "word_en": "sit",
+    "addition_en": "sit, sat, sat",
+    "word_srb": "седети ",
+    "word_ru": "сидеть "
+  },
+  {
+    "id": 70,
+    "word_en": "offer, proposal",
+    "word_srb": "понуда, предлог",
+    "word_ru": "предложение "
+  },
+  {
+    "id": 71,
+    "word_en": "cold",
+    "word_srb": "хладно",
+    "word_ru": "холодно"
+  },
+  {
+    "id": 72,
+    "word_en": "strict",
+    "word_srb": "строг",
+    "word_ru": "строгий"
+  },
+  {
+    "id": 73,
+    "word_en": "dry",
+    "transcript_en": "drī ",
+    "word_srb": "сув",
+    "word_ru": "сухой"
+  },
+  {
+    "id": 74,
+    "word_en": "straight",
+    "transcript_en": "strāt ",
+    "word_srb": "прав ",
+    "word_ru": "прямо"
+  },
+  {
+    "id": 75,
+    "word_en": "cheap",
+    "transcript_en": "CHēp ",
+    "word_srb": "јефтин ",
+    "word_ru": "дешево"
+  },
+  {
+    "id": 76,
+    "word_en": "butterfly",
+    "transcript_en": "ˈbətərˌflī",
+    "word_srb": "лептир",
+    "word_ru": "бабочка"
+  },
+  {
+    "id": 77,
+    "word_en": "joke",
+    "word_srb": "шала",
+    "word_ru": "шутка"
+  },
+  {
+    "id": 78,
+    "word_en": "suit",
+    "word_srb": "одело",
+    "word_ru": "костюм "
+  },
+  {
+    "id": 79,
+    "word_en": "doll",
+    "word_srb": "лутка ",
+    "word_ru": "кукла"
+  },
+  {
+    "id": 80,
+    "word_en": "here",
+    "word_srb": "овде, ту",
+    "word_ru": "тут"
+  },
+  {
+    "id": 81,
+    "word_en": "there",
+    "transcript_en": "T͟He(ə)r ",
+    "word_srb": "тамо",
+    "word_ru": "там"
+  },
+  {
+    "id": 82,
+    "word_en": "customs",
+    "word_srb": "царина ",
+    "word_ru": "таможня"
+  },
+  {
+    "id": 83,
+    "word_en": "without",
+    "transcript_en": "wiT͟Hˈout ",
+    "word_srb": "без",
+    "word_ru": "без"
+  },
+  {
+    "id": 84,
+    "word_en": "transparent",
+    "transcript_en": "tranˈspe(ə)rənt ",
+    "word_srb": "транспарентан",
+    "word_ru": "прозрачный"
+  },
+  {
+    "id": 85,
+    "word_en": "clear",
+    "word_srb": "бистар",
+    "word_ru": "ясно "
+  },
+  {
+    "id": 86,
+    "word_en": "time, weather\n",
+    "word_srb": "време",
+    "word_ru": "время, погода"
+  },
+  {
+    "id": 87,
+    "word_en": "floor",
+    "word_srb": "под",
+    "word_ru": "пол"
+  },
+  {
+    "id": 88,
+    "word_en": "window",
+    "word_srb": "прозор",
+    "word_ru": "окно"
+  },
+  {
+    "id": 89,
+    "word_en": "a bag",
+    "word_srb": "торба",
+    "word_ru": "сумка"
+  },
+  {
+    "id": 90,
+    "word_en": "building",
+    "word_srb": "зграде",
+    "word_ru": "здание"
+  },
+  {
+    "id": 91,
+    "word_en": "room",
+    "word_srb": "соба",
+    "word_ru": "комната"
+  },
+  {
+    "id": 92,
+    "word_en": "wall",
+    "word_srb": "зид",
+    "word_ru": "стена"
+  },
+  {
+    "id": 93,
+    "word_en": "thing",
+    "word_srb": "ствар",
+    "word_ru": "вещь "
+  },
+  {
+    "id": 94,
+    "word_en": "road, way",
+    "word_srb": "пут",
+    "word_ru": "дорога"
+  },
+  {
+    "id": 95,
+    "word_en": "train",
+    "word_srb": "воз",
+    "word_ru": "поезд"
+  },
+  {
+    "id": 96,
+    "word_en": "ticket",
+    "word_srb": "карта ",
+    "word_ru": "билет"
+  },
+  {
+    "id": 97,
+    "word_en": "task",
+    "word_srb": "задатак",
+    "word_ru": "задача"
+  },
+  {
+    "id": 98,
+    "word_en": "through ",
+    "word_srb": "кроз",
+    "word_ru": "через"
+  },
+  {
+    "id": 99,
+    "word_en": "hope",
+    "word_srb": "нада ",
+    "word_ru": "надежда"
+  },
+  {
+    "id": 100,
+    "word_en": "answer",
+    "transcript_en": "ˈansər ",
+    "word_srb": "одговор",
+    "word_ru": "ответ"
+  },
+  {
+    "id": 101,
+    "word_en": "product",
+    "transcript_en": "ˈprädəkt ",
+    "word_srb": "производ",
+    "word_ru": "товар, продукт"
+  },
+  {
+    "id": 102,
+    "word_en": "everywhere",
+    "transcript_en": "ˈevrēˌ(h)wer ",
+    "word_srb": "свуда",
+    "word_ru": "везде"
+  },
+  {
+    "id": 103,
+    "word_en": "almost",
+    "transcript_en": "ôlˌmōst ",
+    "word_srb": "скоро",
+    "word_ru": "почти"
+  },
+  {
+    "id": 104,
+    "word_en": "housing",
+    "word_srb": "стамбени",
+    "word_ru": "жилой"
+  },
+  {
+    "id": 105,
+    "word_en": "near",
+    "word_srb": "близу",
+    "word_ru": "возле"
   }
 ]

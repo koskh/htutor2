@@ -2,11 +2,11 @@
   {
     "id": 0,
     "title": "Test lessons 1",
-    "wordsIds": "1-9,10"
+    "wordsIds": "0-55"
   },
   {
     "id": 1,
     "title": "Test lessons 2",
-    "wordsIds": "1-3,5,10"
+    "wordsIds": "56-105"
   }
 ]
