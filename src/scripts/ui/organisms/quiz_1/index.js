@@ -89,7 +89,7 @@ class Quiz1 extends React.Component<Props, State> {
         const quizWord = _.get(word, `word_${quizLng}`);
         const quizTranslate = _.get(word, `transcript_${quizLng}`);
 
-        const quizIndex = _.random(_.words(quizWord, /[^, ]+/g).length - 1);
+        const quizIndex = _.random(_.words(quizWord, /[^,]+/g).length - 1);
 
         const QNT_VARIANTS = 6;
         const variants = getRandomWords({excludedWordId: wordId, words, quantity: QNT_VARIANTS});
@@ -101,8 +101,8 @@ class Quiz1 extends React.Component<Props, State> {
                 <Row>
                     <Col className={'text-center font-weight-bold'}>
                         <Button color={this.state.isCorrect === false ? 'danger' : 'light'} block={true}>
-                            {_.get(_.words(quizWord, /[^, ]+/g), quizIndex)}&nbsp;
-                            {quizTranslate ? `[${_.get(_.words(quizTranslate, /[^, ]+/g), quizIndex)}]` : ''}
+                            {_.get(_.words(quizWord, /[^,]+/g), quizIndex)}&nbsp;
+                            {quizTranslate ? `[${_.get(_.words(quizTranslate, /[^,]+/g), quizIndex)}]` : ''}
                         </Button>
                     </Col>
                 </Row>
@@ -114,9 +114,9 @@ class Quiz1 extends React.Component<Props, State> {
 
                     return (
                         <Button key={k} outline={true} color="info" block={true}
-                                onClick={() => this._onSend({id: v.id})}
+                            onClick={() => this._onSend({id: v.id})}
                         >
-                            {_.sample(_.words(_.get(v, `word_${lng}`), /[^, ]+/g))}
+                            {_.sample(_.words(_.get(v, `word_${lng}`), /[^,]+/g))}
                         </Button>
                     );
                 })}
