@@ -704,5 +704,312 @@
     "word_en": "near",
     "word_srb": "близу",
     "word_ru": "возле"
+  },
+  {
+    "id": 106,
+    "word_en": "head",
+    "transcript_en": "hed ",
+    "word_srb": "глава",
+    "word_ru": "голова"
+  },
+  {
+    "id": 107,
+    "word_en": "eyebrow",
+    "transcript_en": "ˈīˌbrou ",
+    "word_srb": "обрва",
+    "word_ru": "бровь"
+  },
+  {
+    "id": 108,
+    "word_en": "eye",
+    "transcript_en": "ī ",
+    "example_en": "my cat is blind in one eye ",
+    "word_srb": "око",
+    "word_ru": "глаз"
+  },
+  {
+    "id": 109,
+    "word_en": "face",
+    "transcript_en": "fās ",
+    "word_srb": "лице",
+    "word_ru": "лицо"
+  },
+  {
+    "id": 110,
+    "word_en": "neck",
+    "transcript_en": "nek ",
+    "word_srb": "врат",
+    "word_ru": "шея"
+  },
+  {
+    "id": 111,
+    "word_en": "hand, arm",
+    "transcript_en": "hand, ärm",
+    "word_srb": "рука ",
+    "word_ru": "рука"
+  },
+  {
+    "id": 112,
+    "word_en": "nail",
+    "transcript_en": "nāl ",
+    "word_srb": "нокат",
+    "word_ru": "ноготь "
+  },
+  {
+    "id": 113,
+    "word_en": "palm",
+    "transcript_en": "pä(l)m ",
+    "word_srb": "длан",
+    "word_ru": "ладонь "
+  },
+  {
+    "id": 114,
+    "word_en": "leg",
+    "transcript_en": "leg ",
+    "word_srb": "нога",
+    "word_ru": "нога"
+  },
+  {
+    "id": 115,
+    "word_en": "toe",
+    "transcript_en": "tō ",
+    "word_srb": "ножни прст",
+    "word_ru": "палец на ноге "
+  },
+  {
+    "id": 116,
+    "word_en": "heel",
+    "transcript_en": "hēl ",
+    "word_srb": "пета ",
+    "word_ru": "пятка"
+  },
+  {
+    "id": 117,
+    "word_en": "big toe",
+    "word_srb": "ножни палац",
+    "word_ru": "большой палец ноги"
+  },
+  {
+    "id": 118,
+    "word_en": "thigh",
+    "transcript_en": "THī ",
+    "word_srb": "бутина",
+    "word_ru": "бедро"
+  },
+  {
+    "id": 119,
+    "word_en": "stomach",
+    "transcript_en": "stəmək ",
+    "word_srb": "стомак",
+    "word_ru": "живот "
+  },
+  {
+    "id": 120,
+    "word_en": "thumb",
+    "transcript_en": "THəm ",
+    "word_srb": "палац",
+    "word_ru": "большой палец"
+  },
+  {
+    "id": 121,
+    "word_en": "index finger",
+    "word_srb": "кажипрст",
+    "word_ru": "указательный палец"
+  },
+  {
+    "id": 122,
+    "word_en": "middle finger",
+    "word_srb": "средњи прст",
+    "word_ru": "средний палец"
+  },
+  {
+    "id": 123,
+    "word_en": "ring finger",
+    "word_srb": "домали прст",
+    "word_ru": "Безымянный палец"
+  },
+  {
+    "id": 124,
+    "word_en": "small finger",
+    "word_srb": "мали прст",
+    "word_ru": "маленький палец"
+  },
+  {
+    "id": 125,
+    "word_en": "hand",
+    "transcript_en": "hand ",
+    "word_srb": "шака ",
+    "word_ru": "рука"
+  },
+  {
+    "id": 126,
+    "word_en": "forearm",
+    "transcript_en": "ˈfôrˌärm ",
+    "word_srb": "подлактица",
+    "word_ru": "предплечье"
+  },
+  {
+    "id": 127,
+    "word_en": "elbow",
+    "transcript_en": "ˈelˌbō ",
+    "word_srb": "лакат",
+    "word_ru": "локоть"
+  },
+  {
+    "id": 128,
+    "word_en": "upper arm",
+    "word_srb": "надлактица",
+    "word_ru": "плечо"
+  },
+  {
+    "id": 129,
+    "word_en": "mouth",
+    "transcript_en": "maʋθ",
+    "word_srb": "уста",
+    "word_ru": "рот"
+  },
+  {
+    "id": 130,
+    "word_en": "nose",
+    "transcript_en": "nōz ",
+    "word_srb": "нос",
+    "word_ru": "нос"
+  },
+  {
+    "id": 131,
+    "word_en": "ear",
+    "transcript_en": "i(ə)r ",
+    "word_srb": "уво ",
+    "word_ru": "ухо"
+  },
+  {
+    "id": 132,
+    "word_en": "hair",
+    "transcript_en": "he(ə)r ",
+    "word_srb": "коса",
+    "word_ru": "волосы"
+  },
+  {
+    "id": 133,
+    "word_en": "forehead",
+    "transcript_en": "ˈfôrˌhed ",
+    "word_srb": "чело",
+    "word_ru": "лоб"
+  },
+  {
+    "id": 134,
+    "word_en": "eyelash",
+    "transcript_en": "ˈīˌlaSH ",
+    "word_srb": "трепавица",
+    "word_ru": "ресница"
+  },
+  {
+    "id": 135,
+    "word_en": "shoulder",
+    "transcript_en": "ˈSHōldər ",
+    "word_srb": "раме ",
+    "word_ru": "плечо"
+  },
+  {
+    "id": 136,
+    "word_en": "chest",
+    "transcript_en": "CHest ",
+    "word_srb": "груди ",
+    "word_ru": "грудь"
+  },
+  {
+    "id": 137,
+    "word_en": "wrist",
+    "transcript_en": "rist ",
+    "word_srb": "ручни зглоб",
+    "word_ru": "запястье"
+  },
+  {
+    "id": 138,
+    "word_en": "upper leg",
+    "word_srb": "наткољенице",
+    "word_ru": "бедро"
+  },
+  {
+    "id": 139,
+    "word_en": "knee",
+    "transcript_en": "nē ",
+    "word_srb": "колено",
+    "word_ru": "колено"
+  },
+  {
+    "id": 140,
+    "word_en": "lower leg",
+    "word_srb": "потколеница",
+    "word_ru": "голень"
+  },
+  {
+    "id": 141,
+    "word_en": "sole of the foot",
+    "word_srb": "табан ",
+    "word_ru": "ступня"
+  },
+  {
+    "id": 142,
+    "word_en": "foot",
+    "transcript_en": "fo͝ot ",
+    "word_srb": "стопала",
+    "word_ru": "лодыжка"
+  },
+  {
+    "id": 143,
+    "word_en": "ankle",
+    "transcript_en": "ˈaNGkəl ",
+    "word_srb": "чланак",
+    "word_ru": "лодыжка"
+  },
+  {
+    "id": 144,
+    "word_en": "hip",
+    "transcript_en": "hip ",
+    "word_srb": "кук",
+    "word_ru": "тазобедренн"
+  },
+  {
+    "id": 145,
+    "word_en": "navel",
+    "transcript_en": "ˈnāvəl ",
+    "word_srb": "пупак",
+    "word_ru": "пупок"
+  },
+  {
+    "id": 146,
+    "word_en": "back",
+    "transcript_en": "bak ",
+    "word_srb": "леђа ",
+    "word_ru": "спина "
+  },
+  {
+    "id": 147,
+    "word_en": "chin",
+    "transcript_en": "CHin ",
+    "word_srb": "брада",
+    "word_ru": "подбородок"
+  },
+  {
+    "id": 148,
+    "word_en": "cheek",
+    "transcript_en": "CHēk ",
+    "word_srb": "образ",
+    "word_ru": "щека"
+  },
+  {
+    "id": 149,
+    "word_en": "boy",
+    "transcript_en": "boi ",
+    "word_srb": "дечак",
+    "word_ru": "мальчик"
+  },
+  {
+    "id": 150,
+    "word_en": "girl",
+    "transcript_en": "gərl ",
+    "word_srb": "девојчица",
+    "word_ru": "девушка"
   }
 ]

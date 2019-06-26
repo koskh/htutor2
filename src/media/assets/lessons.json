@@ -1,12 +1,1 @@
-[
-  {
-    "id": 0,
-    "title": "Test lessons 1",
-    "wordsIds": "0-55"
-  },
-  {
-    "id": 1,
-    "title": "Test lessons 2",
-    "wordsIds": "56-105"
-  }
-]
+[{"id":0,"title":"Test lessons 1","wordsIds":"0-55"},{"id":1,"title":"Test lessons 2","wordsIds":"56-105"},{"id":2,"title":"This is me / Ово сам ja","wordsIds":"106-150"}]

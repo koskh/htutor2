@@ -97,7 +97,7 @@ class Lesson extends React.Component<Props> {
 
                     return (
                         <div key={k}>
-                            {word.id} {word.word_en} - {word.word_srb} - {word.word_ru}
+                            {word.id} {word.word_en} [{word.transcript_en}] - {word.word_srb} - {word.word_ru}
                         </div>
                     );
                 })}

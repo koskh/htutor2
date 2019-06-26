@@ -97,7 +97,7 @@ class Quiz1 extends React.Component<Props, State> {
                 <Row>
                     <Col className={'text-center font-weight-bold'}>
                         <Button color={this.state.isCorrect === false ? 'danger' : 'light'} block={true}>
-                            {_.sample(_.data(_.get(word, `word_${quizLng}`), /[^, ]+/g))}
+                            {_.sample(_.words(_.get(word, `word_${quizLng}`), /[^, ]+/g))}
                         </Button>
                     </Col>
                 </Row>
@@ -111,7 +111,7 @@ class Quiz1 extends React.Component<Props, State> {
                         <Button key={k} outline={true} color="info" block={true}
                             onClick={() => this._onSend({id: v.id})}
                         >
-                            {_.sample(_.data(_.get(v, `word_${lng}`), /[^, ]+/g))}
+                            {_.sample(_.words(_.get(v, `word_${lng}`), /[^, ]+/g))}
                         </Button>
                     );
                 })}
