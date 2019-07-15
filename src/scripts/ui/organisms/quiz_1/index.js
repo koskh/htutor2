@@ -88,6 +88,7 @@ class Quiz1 extends React.Component<Props, State> {
         const word = getWordById({wordsId: wordId, words: words});
         const quizWord = _.get(word, `word_${quizLng}`);
         const quizTranslate = _.get(word, `transcript_${quizLng}`);
+        const quizAddition = _.get(word, `addition_${quizLng}`);
 
         const quizIndex = _.random(_.words(quizWord, /[^,]+/g).length - 1);
 
@@ -103,6 +104,7 @@ class Quiz1 extends React.Component<Props, State> {
                         <Button color={this.state.isCorrect === false ? 'danger' : 'light'} block={true}>
                             {_.get(_.words(quizWord, /[^,]+/g), quizIndex)}&nbsp;
                             {quizTranslate ? `[${_.get(_.words(quizTranslate, /[^,]+/g), quizIndex)}]` : ''}
+                            {quizAddition ? `(${_.get(_.words(quizAddition, /[^,]+/g), quizIndex)})` : ''}
                         </Button>
                     </Col>
                 </Row>
@@ -111,12 +113,15 @@ class Quiz1 extends React.Component<Props, State> {
 
                 {_.map(answers, (v: any, k: number) => {
                     const lng = _.sample(variantsLngs);
+                    const addition = _.get(v, `addition_${lng}`);
 
                     return (
                         <Button key={k} outline={true} color="info" block={true}
                             onClick={() => this._onSend({id: v.id})}
                         >
                             {_.sample(_.words(_.get(v, `word_${lng}`), /[^,]+/g))}
+                            &nbsp; {addition? `(${addition})`: ''}
+
                         </Button>
                     );
                 })}
