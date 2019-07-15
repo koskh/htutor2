@@ -40,7 +40,7 @@ class Quiz extends React.Component<Props, State> {
 
     state: State = {
         // eslint-disable-next-line no-invalid-this
-        wordsIds: wordsIdsAsNumbers({wordsIds: this.props.lesson.wordsIds}),
+        wordsIds: _.shuffle(wordsIdsAsNumbers({wordsIds: this.props.lesson.wordsIds})),
         currentIndex: 0
     };
 
