@@ -148,14 +148,11 @@ class Quiz1 extends React.Component<Props, State> {
 
                 {_.map(answers, (v: any, k: number) => {
                     const lng = _.sample(variantsLngs);
-                    const addition = _.get(v, `addition_${lng}`);
-
                     return (
                         <Button key={k} outline={true} color="info" block={true}
                             onClick={() => this._onSend({id: v.id})}
                         >
                             {_.sample(_.words(_.get(v, `word_${lng}`), /[^,]+/g))}
-                            &nbsp; {addition ? `(${addition})` : ''}
 
                         </Button>
                     );
