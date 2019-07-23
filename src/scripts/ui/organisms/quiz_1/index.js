@@ -75,6 +75,18 @@ class Quiz1 extends React.Component<Props, State> {
             this.setState({isCorrect: false});
     };
 
+    _playSound = (options: Object) => {
+        const {word, file, lng} = options;
+
+        console.log('options', options);
+
+        if (file === 'ogg') {
+            const firstLetter= _.first(word);
+            const snd = new Audio(`/sounds/${lng}/${firstLetter}/${word}.${file}`);
+            snd.play();
+        }
+    };
+
     /**
      * React render
      * @return {React.Component}
@@ -87,7 +99,8 @@ class Quiz1 extends React.Component<Props, State> {
 
         const word = getWordById({wordsId: wordId, words: words});
         const quizWord = _.get(word, `word_${quizLng}`);
-        const quizTranslate = _.get(word, `transcript_${quizLng}`);
+        const quizSound = _.get(word, `sound_${quizLng}`);
+        const quizTranscript = _.get(word, `transcript_${quizLng}`);
         const quizAddition = _.get(word, `addition_${quizLng}`);
 
         const quizIndex = _.random(_.words(quizWord, /[^,]+/g).length - 1);
@@ -97,17 +110,39 @@ class Quiz1 extends React.Component<Props, State> {
 
         const answers = _.shuffle([...variants, word]);
 
+        const parsedQuizWord = _.trim(_.get(_.words(quizWord, /[^,]+/g), quizIndex));
+        const transcript = _.get(_.words(quizTranscript, /[^,]+/g), quizIndex);
+        const soundFile = _.trim(_.get(_.words(quizSound, /[^,]+/g), quizIndex));
+
         return (
             <React.Fragment>
                 <Row>
                     <Col className={'text-center font-weight-bold'}>
                         <Button color={this.state.isCorrect === false ? 'danger' : 'light'} block={true}>
-                            {_.get(_.words(quizWord, /[^,]+/g), quizIndex)}&nbsp;
-                            {quizTranslate ? `[${_.get(_.words(quizTranslate, /[^,]+/g), quizIndex)}]` : ''}
-                            {quizAddition ? `(${_.get(_.words(quizAddition, /[^,]+/g), quizIndex)})` : ''}
+                            {parsedQuizWord}&nbsp;
+                            {quizTranscript ? `[${transcript}]` : ''}
+                            {quizAddition ? `(${quizAddition})` : ''}
                         </Button>
                     </Col>
                 </Row>
+
+                {quizSound ? (
+                    <Row className={'my-2'}>
+                        <Col>
+                            <Button color={'light'}
+                                onClick={() => this._playSound({
+                                    word: parsedQuizWord,
+                                    file: soundFile,
+                                    lng: quizLng
+                                })}
+                                block={true}
+                            >
+                               sound
+                            </Button>
+                        </Col>
+                    </Row>
+                ) : null}
+
 
                 <Row className={'my-2'}/>
 
@@ -120,7 +155,7 @@ class Quiz1 extends React.Component<Props, State> {
                             onClick={() => this._onSend({id: v.id})}
                         >
                             {_.sample(_.words(_.get(v, `word_${lng}`), /[^,]+/g))}
-                            &nbsp; {addition? `(${addition})`: ''}
+                            &nbsp; {addition ? `(${addition})` : ''}
 
                         </Button>
                     );
