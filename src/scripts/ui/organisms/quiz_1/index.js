@@ -80,11 +80,20 @@ class Quiz1 extends React.Component<Props, State> {
 
         console.log('options', options);
 
-        if (file === 'ogg') {
-            const firstLetter= _.first(word);
+        if (file === 'ogg' || file==='mp3') {
+            const firstLetter = _.first(word);
             const snd = new Audio(`/sounds/${lng}/${firstLetter}/${word}.${file}`);
+
             snd.play();
         }
+    };
+    _playAdditionalSound = (options: Object) => {
+        const {file, lng} = options;
+
+        const firstLetter = _.first(file);
+        const snd = new Audio(`/sounds/${lng}/${firstLetter}/${file}`);
+
+        snd.play();
     };
 
     /**
@@ -100,6 +109,7 @@ class Quiz1 extends React.Component<Props, State> {
         const word = getWordById({wordsId: wordId, words: words});
         const quizWord = _.get(word, `word_${quizLng}`);
         const quizSound = _.get(word, `sound_${quizLng}`);
+        const quizAdditionalSound = _.get(word, `additionSound_${quizLng}`);
         const quizTranscript = _.get(word, `transcript_${quizLng}`);
         const quizAddition = _.get(word, `addition_${quizLng}`);
 
@@ -113,6 +123,7 @@ class Quiz1 extends React.Component<Props, State> {
         const parsedQuizWord = _.trim(_.get(_.words(quizWord, /[^,]+/g), quizIndex));
         const transcript = _.get(_.words(quizTranscript, /[^,]+/g), quizIndex);
         const soundFile = _.trim(_.get(_.words(quizSound, /[^,]+/g), quizIndex));
+        const soundAdditionalFile = _.trim(_.get(_.words(quizAdditionalSound, /[^,]+/g), quizIndex));
 
         return (
             <React.Fragment>
@@ -137,7 +148,23 @@ class Quiz1 extends React.Component<Props, State> {
                                 })}
                                 block={true}
                             >
-                               sound
+                                sound
+                            </Button>
+                        </Col>
+                    </Row>
+                ) : null}
+
+                {quizAdditionalSound ? (
+                    <Row className={'my-2'}>
+                        <Col>
+                            <Button color={'light'}
+                                onClick={() => this._playAdditionalSound({
+                                    file: soundAdditionalFile,
+                                    lng: quizLng
+                                })}
+                                block={true}
+                            >
+                                additionSound ({soundAdditionalFile})
                             </Button>
                         </Col>
                     </Row>
